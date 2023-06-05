@@ -15,9 +15,7 @@ class Solution {
         
         if(isSatisfied(want, number)) answer += 1;
         
-        for(int i = 1; i < discount.length; i++){
-            if(i + 9 >= discount.length) break;
-            
+        for(int i = 1; i < discount.length && i + 9 < discount.length; i++){
             String prev = discount[i - 1];
             String next = discount[i + 9];
             
