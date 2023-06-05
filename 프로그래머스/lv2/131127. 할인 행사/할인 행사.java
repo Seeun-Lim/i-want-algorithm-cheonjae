@@ -33,13 +33,11 @@ class Solution {
     }
     
     public boolean isSatisfied(String[] want, int[] number){
-        boolean satisfied = true;
         for(int j = 0; j < want.length; j++){
             if(m.get(want[j]) == null || m.get(want[j]) != number[j]) {
-                satisfied = false;
-                break;
+                return false;
             }
         }
-        return satisfied;
+        return true;
     }
 }
