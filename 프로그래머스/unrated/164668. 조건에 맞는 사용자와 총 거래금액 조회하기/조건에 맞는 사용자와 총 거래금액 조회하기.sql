@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT uu.USER_ID, uu.NICKNAME, sum(PRICE) AS TOTAL_SALES
+from USED_GOODS_BOARD ub join USED_GOODS_USER uu
+on ub.WRITER_ID = uu.USER_ID
+where ub.status = "DONE"
+GROUP BY uu.USER_ID
+HAVING TOTAL_SALES >= 700000
+order by TOTAL_SALES;
